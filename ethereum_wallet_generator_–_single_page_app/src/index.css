@@ -1,0 +1,105 @@
+:root {
+  --bg: #121212;
+  --surface: #1e1e1e;
+  --text: #ffffff;
+  --accent: #38bdf8;
+  --primary: #9e7fff;
+  --border: #2f2f2f;
+  --radius: 16px;
+  --spacing: 16px;
+}
+
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body, html, #root {
+  height: 100%;
+  font-family: system-ui, sans-serif;
+  background: var(--bg);
+  color: var(--text);
+}
+
+.app {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100%;
+  padding: var(--spacing);
+}
+
+.wallet-generator {
+  text-align: center;
+  max-width: 480px;
+  width: 100%;
+}
+
+.title {
+  font-size: 2rem;
+  margin-bottom: var(--spacing);
+}
+
+.generate-btn {
+  background: var(--accent);
+  color: var(--text);
+  border: none;
+  padding: calc(var(--spacing) / 2) var(--spacing);
+  font-size: 1rem;
+  border-radius: var(--radius);
+  cursor: pointer;
+  transition: background 0.2s;
+}
+
+.generate-btn:hover {
+  background: #2bb0e6;
+}
+
+.result {
+  margin-top: var(--spacing);
+  text-align: left;
+}
+
+.field {
+  margin-bottom: var(--spacing);
+}
+
+.field label {
+  display: block;
+  font-weight: 600;
+  margin-bottom: 4px;
+}
+
+.value {
+  display: flex;
+  align-items: center;
+  background: var(--surface);
+  padding: calc(var(--spacing) / 2);
+  border-radius: var(--radius);
+  border: 1px solid var(--border);
+}
+
+.value span {
+  flex: 1;
+  word-break: break-all;
+}
+
+.copy-btn {
+  background: transparent;
+  border: none;
+  color: var(--accent);
+  margin-left: 8px;
+  cursor: pointer;
+  font-size: 0.9rem;
+}
+
+.copy-btn:hover {
+  text-decoration: underline;
+}
+
+.disclaimer {
+  margin-top: var(--spacing);
+  font-size: 0.8rem;
+  color: #ff6b6b;
+}
